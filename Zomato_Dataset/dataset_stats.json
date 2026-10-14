@@ -1,0 +1,15 @@
+{
+  "dataset": "Zomato Restaurant Reviews & Bangalore Dataset",
+  "domain": "Restaurant & Dining Recommendation",
+  "num_users": 7446,
+  "num_items": 100,
+  "num_interactions": 9842,
+  "num_train": 7277,
+  "num_test": 2565,
+  "sparsity_percent": 98.6782,
+  "density_percent": 1.3218,
+  "rating_mean": 3.601,
+  "rating_std": 1.4835,
+  "avg_user_degree": 1.3218,
+  "avg_item_degree": 98.42
+}

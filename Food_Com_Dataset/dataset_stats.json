@@ -1,0 +1,17 @@
+{
+  "dataset": "Food.com (Recipes & User Interactions)",
+  "domain": "Food & Recipe Recommendation",
+  "num_users": 25076,
+  "num_items": 160901,
+  "num_interactions": 698901,
+  "num_train": 559120,
+  "num_test": 139781,
+  "sparsity_percent": 99.98267797514377,
+  "density_percent": 0.017322024856227358,
+  "date_min": "2000-02-25",
+  "date_max": "2018-12-19",
+  "rating_mean": 4.574089892559891,
+  "rating_std": 0.9590221657607239,
+  "avg_user_degree": 27.871311213909713,
+  "avg_item_degree": 4.343670952946222
+}

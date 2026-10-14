@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" modified="2026-10-14T16:22:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="fig_2_1_collab_2_3_hop" name="Collaborative Signals 2-hop and 3-hop">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="CƠ CHẾ LAN TRUYỀN TÍN HIỆU CỘNG TÁC 2-HOP VÀ 3-HOP TRÊN ĐỒ THỊ ẨM THỰC" 
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#000000;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="800" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- User u1 Box -->
+        <mxCell id="u1_box" value="Thực khách u&lt;sub&gt;1&lt;/sub&gt;&#xa;(Người nhận gợi ý)" 
+          style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="180" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Shared Item i1 -->
+        <mxCell id="i1_box" value="Món ăn i&lt;sub&gt;1&lt;/sub&gt;&#xa;(Món cùng đặt làm cầu nối ẩm thực)" 
+          style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="230" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- User u2 Box -->
+        <mxCell id="u2_box" value="Thực khách u&lt;sub&gt;2&lt;/sub&gt;&#xa;(Người có gu ẩm thực đồng điệu)" 
+          style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="690" y="80" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Target Item i2 -->
+        <mxCell id="i2_box" value="Món ăn i&lt;sub&gt;2&lt;/sub&gt;&#xa;(Món tiềm năng u&lt;sub&gt;2&lt;/sub&gt; đánh giá cao)" 
+          style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="690" y="240" width="200" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Solid Base Graph Edges -->
+        <mxCell id="hist_u1_i1" value="Đã đặt món i&lt;sub&gt;1&lt;/sub&gt;" 
+          style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=11;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="u1_box" target="i1_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hist_u2_i1" value="Đã đặt món i&lt;sub&gt;1&lt;/sub&gt;" 
+          style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=11;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="i1_box" target="u2_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hist_u2_i2" value="u&lt;sub&gt;2&lt;/sub&gt; đã đặt &amp; khen ngon món i&lt;sub&gt;2&lt;/sub&gt;" 
+          style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=11;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="u2_box" target="i2_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 2-HOP PROPAGATION (User Similarity) -->
+        <mxCell id="box_2hop" value="[CƠ CHẾ ĐỒNG SỞ THÍCH 2-HOP (User ── Item ── User)]:&#xa;Chặng 1: Đặc trưng gu ẩm thực của u&lt;sub&gt;2&lt;/sub&gt; gom tụ vào món ăn cầu nối i&lt;sub&gt;1&lt;/sub&gt;&#xa;Chặng 2: Món ăn i&lt;sub&gt;1&lt;/sub&gt; truyền thông điệp của u&lt;sub&gt;2&lt;/sub&gt; sang vector biểu diễn của u&lt;sub&gt;1&lt;/sub&gt;&#xa;──► Kết quả: u&lt;sub&gt;1&lt;/sub&gt; và u&lt;sub&gt;2&lt;/sub&gt; xích lại gần nhau trong không gian nhúng (High Cosine Sim)" 
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=11.5;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="185" width="560" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- 2-hop curved arrows -->
+        <mxCell id="msg_hop1" value="Chặng 1 (u&lt;sub&gt;2&lt;/sub&gt; → i&lt;sub&gt;1&lt;/sub&gt;)" 
+          style="endArrow=classic;html=1;rounded=1;curved=1;strokeColor=#000000;strokeWidth=1.8;fontFamily=Times New Roman;fontSize=10.5;fontStyle=1;fontColor=#000000;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="u2_box" target="i1_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="35" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_hop2" value="Chặng 2 (i&lt;sub&gt;1&lt;/sub&gt; → u&lt;sub&gt;1&lt;/sub&gt;)" 
+          style="endArrow=classic;html=1;rounded=1;curved=1;strokeColor=#000000;strokeWidth=1.8;fontFamily=Times New Roman;fontSize=10.5;fontStyle=1;fontColor=#000000;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="i1_box" target="u1_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="35" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 3-HOP PROPAGATION (Target Item Signal) -->
+        <mxCell id="box_3hop" value="[CƠ CHẾ LAN TRUYỀN MÓN ĂN MỤC TIÊU 3-HOP (Item ── User ── Item ── User)]:&#xa;• Hop 1 (1-hop): Tín hiệu món ăn i&lt;sub&gt;2&lt;/sub&gt; truyền vào thực khách u&lt;sub&gt;2&lt;/sub&gt; (i&lt;sub&gt;2&lt;/sub&gt; → u&lt;sub&gt;2&lt;/sub&gt;)&#xa;• Hop 2 (2-hop): Thực khách u&lt;sub&gt;2&lt;/sub&gt; mang đặc trưng món i&lt;sub&gt;2&lt;/sub&gt; truyền vào món chung i&lt;sub&gt;1&lt;/sub&gt; (u&lt;sub&gt;2&lt;/sub&gt; → i&lt;sub&gt;1&lt;/sub&gt;)&#xa;• Hop 3 (3-hop): Món chung i&lt;sub&gt;1&lt;/sub&gt; truyền toàn bộ tín hiệu cộng tác bậc cao vào u&lt;sub&gt;1&lt;/sub&gt; (i&lt;sub&gt;1&lt;/sub&gt; → u&lt;sub&gt;1&lt;/sub&gt;)&#xa;──► Đường truyền 3 chặng: i&lt;sub&gt;2&lt;/sub&gt; ──► u&lt;sub&gt;2&lt;/sub&gt; ──► i&lt;sub&gt;1&lt;/sub&gt; ──► u&lt;sub&gt;1&lt;/sub&gt;" 
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=11.5;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="290" width="560" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Final Recommendation Arrow -->
+        <mxCell id="arr_rec" value="★ KHÁM PHÁ MÓN ĂN MỚI: u&lt;sub&gt;1&lt;/sub&gt; được đề xuất món ăn i&lt;sub&gt;2&lt;/sub&gt; với điểm số ŷ&lt;sub&gt;u1,i2&lt;/sub&gt; = z&lt;sub&gt;u1&lt;/sub&gt;ᵀ · z&lt;sub&gt;i2&lt;/sub&gt; cao" 
+          style="endArrow=classic;html=1;rounded=0;dashed=1;strokeColor=#000000;strokeWidth=2.2;fontFamily=Times New Roman;fontSize=12;fontStyle=1;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="u1_box" target="i2_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="420" />
+              <mxPoint x="640" y="420" />
+              <mxPoint x="640" y="272" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Summary Takeaway Box -->
+        <mxCell id="box_sum" value="KẾT LUẬN LÝ THUYẾT LAN TRUYỀN ĐỒ THỊ GNN:&#xa;Dù thực khách u&lt;sub&gt;1&lt;/sub&gt; chưa từng đặt món i&lt;sub&gt;2&lt;/sub&gt;, mạng nơ-ron đồ thị LightGCN vẫn tự động học được mối liên kết tiềm ẩn thông qua tín hiệu cộng tác 2-hop (đồng sở thích khách hàng) và 3-hop (truyền dẫn thuộc tính món ăn qua láng giềng). Đây là nền tảng toán học giúp PCRS giải quyết triệt để vấn đề dữ liệu thưa thớt (Data Sparsity)." 
+          style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontFamily=Times New Roman;fontSize=11.5;align=left;spacingLeft=15;" vertex="1" parent="1">
+          <mxGeometry x="80" y="460" width="810" height="75" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
